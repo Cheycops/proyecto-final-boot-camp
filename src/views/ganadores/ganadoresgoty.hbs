@@ -1,0 +1,30 @@
+<div class="container mt-2">
+    <h3 class="text-center text-uppercase p-2"> ganadores premio goty</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+
+        {{#if ganadoresgoty}}
+        
+                    {{#each ganadoresgoty}}
+                        <div class="col tj">
+                            <div class="card text-bg-dark tj1">
+                                <img src="/img/{{img}}.jpg" class="card-img-top p-2 img" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">GANADOR {{titulo}}</h5>
+                                    <p class="card-text"><b>GENERO:</b> {{genero}} 
+                                                        <br><b>DESARROLADOR:</b> {{desarrollador}}
+                                                        <br><b>DISTRIBUIDOR:</b> {{distribuidor}}
+                                                        <br><b>PLATAFORMAS:</b> {{plataformas}}
+                                                        </p>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+        {{else}}
+        </div>
+        {{/if}}
+
+
+
+    </div>
+</div>
