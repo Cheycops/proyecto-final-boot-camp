@@ -21,3 +21,13 @@ body{
 .img{
     border-radius: 20px;
 }
+.pasds{
+    width: max-content;
+    flex-flow: column wrap;
+    align-content: center;
+}
+.imglist{
+    width: 90px;
+    height: auto;
+    
+}

@@ -1,23 +1,34 @@
 <div class="container p-4">
     <div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card text-center">
+        <div class="col-md-6 mx-auto">
+            <div class="card text-center addcard">
                 <div class="card-header">
-                    <h3 class="text-uppercase">Editar Persona</h3>
+                    <h3 class="text-uppercase">Editar un Ganador del premio goty</h3>
                 </div>
                 <div class="card-body">
-                    <form action="/edit/{{persona.id}}" method="post">
-                        <div class="input-group mt-2">
-                            <label for="name" class="input-group-text">Nombre Persona</label>
-                            <input class="from-control" type="text" name="name" id="name" placeholder="Ejemplo: Cristian Ferney" value="{{persona.name}}" autofocus required>
+                    <form action="/edit/{{ganador.id}}" method="post" enctype="multipart/form-data" class="pasds">
+                        <div class="input-group mt-2 foradd">
+                            <label for="titulo" class="input-group-text">Titulo del Ganador</label>
+                            <input class="from-control " type="text" name="titulo" id="titulo" value="{{ganador.titulo}}">
                         </div>
-                        <div class="input-group mt-2">
-                            <label for="lastname" class="input-group-text">Apellido Persona</label>
-                            <input class="from-control" type="text" name="lastname" id="lastname" placeholder="Ejemplo: Chacon Rodriguez" value="{{persona.lastname}}"  required>
+                        <div class="input-group mt-2 foradd">
+                            <label for="genero" class="input-group-text">Genero del Videojuego</label>
+                            <input class="from-control " type="text" name="genero" id="genero" value="{{ganador.genero}}"  required>
                         </div>
-                        <div class="input-group mt-2">
-                            <label for="AGE" class="input-group-text"> Edad </label>
-                            <input class="from-control" type="number" name="AGE" id="AGE" placeholder="0" value="{{persona.AGE}}" required>
+                        <div class="input-group mt-2 foradd">
+                            <label for="desarrollador" class="input-group-text">Empresa Desarrolladora</label>
+                            <input class="from-control " type="text" name="desarrollador" id="desarrollador" value="{{ganador.desarrollador}}"  required>
+                        </div>
+                        <div class="input-group mt-2 foradd">
+                            <label for="distribuidor" class="input-group-text">Empresa Distribuidora</label>
+                            <input class="from-control " type="text" name="distribuidor" id="distribuidor" value="{{ganador.distribuidor}}"  required>
+                        </div>
+                        <div class="input-group mt-2 foradd">
+                            <label for="plataformas" class="input-group-text">Plataformas donde juega</label>
+                            <input class="from-control " type="text" name="plataformas" id="plataformas" value="{{ganador.plataformas}}"  required>
+                        </div>
+                        <div class="input-group mt-2 ">
+                            <input class="from-control " type="file" name="file" id="file" required>
                         </div>
                         <div class="form-group mt-4 d-grid gap-2">
                             <button class="btn btn-success">ACTUALIZAR</button>
