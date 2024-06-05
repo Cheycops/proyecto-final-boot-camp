@@ -30,6 +30,9 @@ app.use(express.json());
 app.get('/', (req, res) =>{
 res.render('index')
 });
+app.get('/quienes_somos', (req, res) =>{
+    res.render('quienesomos/quienesomos')
+    });
 
 app.use(ganadores);
 
